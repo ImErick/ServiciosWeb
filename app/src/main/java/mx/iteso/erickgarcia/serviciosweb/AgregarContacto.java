@@ -12,7 +12,7 @@ import android.widget.Toast;
  * Created by erickgarcia on 04/04/18
  */
 
-public class AgregarContacto extends AppCompatActivity{
+public class AgregarContacto extends AppCompatActivity implements onTaskCompleted{
     EditText editTextNombre, editTextApellido;
     Button buttonGuardar;
 
@@ -29,12 +29,17 @@ public class AgregarContacto extends AppCompatActivity{
             @Override
             public void onClick(View view) {
                 if(!editTextNombre.getText().equals("")){
-                    new NetServices((onTaskCompleted) getBaseContext()).execute("post",
+                    new NetServices(AgregarContacto.this).execute("post",
                             editTextNombre.getText().toString(),
                             editTextApellido.getText().toString());
                 } else
                     Toast.makeText(getBaseContext(), "favor de ingresar los datos", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onTaskCompleted(String response) {
+
     }
 }
