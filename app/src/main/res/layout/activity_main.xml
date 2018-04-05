@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="mx.iteso.erickgarcia.serviciosweb.MainActivity">
+
+    <Button
+        android:id="@+id/btn_agregar_contacto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Contacto"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btn_mostrar_lista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar Lista"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
